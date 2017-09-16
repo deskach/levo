@@ -8,44 +8,46 @@ const handlebars = require('gulp-compile-handlebars');
 const rename = require('gulp-rename');
 const webserver = require('gulp-webserver');
 
- 
+
 gulp.task('sass', function () {
-  return gulp.src('./app/**/*.scss')
-    .pipe(sass().on('error', sass.logError))
-    .pipe(autoprefixer({
-        browsers: ['last 2 versions'],
-        cascade: false
-    }))
-    .pipe(flatten())
-    .pipe(gulp.dest('./dist/css'));
+    return gulp.src('./app/**/*.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
+        .pipe(flatten())
+        .pipe(gulp.dest('./dist/css'));
 });
- 
+
+gulp.task('copy-assets', function () {
+    return gulp.src('./app/global/assets/**')
+        .pipe(gulp.dest('dist/assets'));
+});
+
 gulp.task('watch', function () {
-  gulp.watch('./app/**/*.scss', ['sass']);
-  gulp.watch('./app/**/*.handlebars', ['hbs']);
-  gulp.watch('./app/**/*.js', ['js']);
+    gulp.watch('./app/global/assets/**/*.*', ['copy-assets']);
+    gulp.watch('./app/**/*.scss', ['sass']);
+    gulp.watch('./app/**/*.handlebars', ['hbs']);
+    gulp.watch('./app/**/*.js', ['js']);
 });
 
 
-gulp.task('default', ['lint', 'sass', 'hbs'], function() {
+gulp.task('default', ['lint', 'sass', 'hbs'], function () {
     // Add tests here
 })
 
-gulp.task('lint', function() {
-  return gulp.src(['./app/**/*.js', 'gulpfile.js'])
-    .pipe(jshint({
-        
-    }))
-    .pipe(jshint.reporter(stylish));
+gulp.task('lint', function () {
+    return gulp.src(['./app/**/*.js', 'gulpfile.js'])
+        .pipe(jshint({}))
+        .pipe(jshint.reporter(stylish));
 });
 
 gulp.task('hbs', function () {
-    var templateData = {
-        
-    },
-    options = {
-        batch: ['./app/topnav/hbs/']
-    }
+    var templateData = {},
+        options = {
+            batch: ['./app/topnav/hbs/']
+        }
 
     return gulp.src('app/global/hbs/index.handlebars')
         .pipe(handlebars(templateData, options))
@@ -53,17 +55,17 @@ gulp.task('hbs', function () {
         .pipe(gulp.dest('dist'));
 });
 
-gulp.task('webserver', function() {
-  gulp.src('dist')
-    .pipe(webserver({
-      livereload: true,
-        // directoryListing: {
-        //     enable: true,
-        //     path: "dist"
-        // },
-      open: true,
-      port: 4000
-    }));
+gulp.task('webserver', function () {
+    gulp.src('dist')
+        .pipe(webserver({
+            livereload: true,
+            // directoryListing: {
+            //     enable: true,
+            //     path: "dist"
+            // },
+            open: true,
+            port: 4000
+        }));
 });
 
 // TODO: combine JS files into single file 'app.js'. See TopNav.js for dependency list
