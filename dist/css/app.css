@@ -2826,8 +2826,18 @@ input[type="button"].btn-block {
 .topNav-title {
   color: steelblue; }
 
+@font-face {
+  font-family: "OpenSans";
+  src: url("../../../assets/fonts/OpenSans-Bold.ttf") format("truetype");
+  src: url("../../../assets/fonts/OpenSans-BoldItalic.ttf") format("truetype");
+  src: url("../../../assets/fonts/OpenSans-Italic.ttf") format("truetype");
+  src: url("../../../assets/fonts/OpenSans-Regular.ttf") format("truetype");
+}
+
 body {
-  padding-top: 50px; }
+  padding-top: 50px;
+  font-family: OpenSans sans-serif;
+}
 
 .sg-titleBox {
   padding: 40px 15px;

@@ -44,12 +44,12 @@ gulp.task('hbs', function () {
         
     },
     options = {
-        batch : ['./app/TopNav/hbs/']
+        batch: ['./app/topnav/hbs/']
     }
- 
-    return gulp.src('app/Global/hbs/TopNavExample.handlebars')
+
+    return gulp.src('app/global/hbs/index.handlebars')
         .pipe(handlebars(templateData, options))
-        .pipe(rename('top-nav-example.html'))
+        .pipe(rename('index.html'))
         .pipe(gulp.dest('dist'));
 });
 
@@ -57,10 +57,10 @@ gulp.task('webserver', function() {
   gulp.src('dist')
     .pipe(webserver({
       livereload: true,
-      directoryListing: {
-          enable: true,
-          path: "dist"
-      },
+        // directoryListing: {
+        //     enable: true,
+        //     path: "dist"
+        // },
       open: true,
       port: 4000
     }));

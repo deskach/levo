@@ -1,11 +1,21 @@
 $icon-font-path: "../../../node_modules/bootstrap-sass/assets/fonts/bootstrap/";
 @import "../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
 @import "bootstrap";
+//@import "mixins";
 
-@import "../../TopNav/scss/topnav.scss";
+@import "../../topnav/scss/topnav";
+
+@font-face {
+  font-family: "OpenSans";
+  src: url('../../../assets/fonts/OpenSans-Bold.ttf') format('truetype');
+  src: url('../../../assets/fonts/OpenSans-BoldItalic.ttf') format('truetype');
+  src: url('../../../assets/fonts/OpenSans-Italic.ttf') format('truetype');
+  src: url('../../../assets/fonts/OpenSans-Regular.ttf') format('truetype');
+}
 
 body {
   padding-top: 50px;
+  font-family: OpenSans sans-serif;
 }
 
 
