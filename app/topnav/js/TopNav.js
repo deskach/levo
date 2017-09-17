@@ -22,8 +22,15 @@
 
     // Replaces '--WEEK_DAY_NAME--' and '--MONTH_NAME--' with dynamic contents in element '.topNav-title'
     function setTodayTitle(el) {
+        var subTitleEl = _.find(el.children, function (c) {
+            return c.getAttribute('class') === 'topNav-title';
+        });
 
-        // TODO: add today's week day and month name to the element '.topNav-title', using 'utils.getWeekDay' and 'utils.getMonthName'
+        var innerText = subTitleEl.innerText;
+
+        innerText = innerText.replace("--WEEK_DAY_NAME--", utils.getWeekDay());
+        innerText = innerText.replace("--MONTH_NAME--", utils.getMonthName());
+        subTitleEl.innerText = innerText;
     }
 
 
