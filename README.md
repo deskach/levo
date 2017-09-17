@@ -8,7 +8,7 @@
 + No specific JS framework is required, just vanilla JS (no jQuery). If you prefer to use Babel or Typescript, feel free to add them to the project.
 + Handlebars has been setup for you to use, but if you prefer another templating language, feel free to add it to the project.
 + Add JS to the page by combining all the relevant JS files into 1 file as part of the gulp build (marked by a 'TODO' in the gulpfile.js).
-- Add a unit testing framework of your choice to the project and write tests for any 4 of the functions within 'Utils.js'.
++ Add a unit testing framework of your choice to the project and write tests for any 4 of the functions within 'Utils.js'.
 - Style up the component to match the designs for both mobile and desktop.
 + Look through TopNav.js and complete any area with comments marked 'TODO'.
 + Use Google Font 'Open Sans' provided in the 'assets' folder for all text.

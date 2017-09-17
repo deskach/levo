@@ -9,6 +9,7 @@ var rename = require('gulp-rename');
 var webserver = require('gulp-webserver');
 var jsValidate = require('gulp-jsvalidate');
 var concat = require('gulp-concat');
+var jasmine = require('gulp-jasmine');
 
 
 gulp.task('sass', function () {
@@ -37,6 +38,8 @@ gulp.task('watch', function () {
 
 gulp.task('default', ['lint', 'sass', 'hbs'], function () {
     // Add tests here
+    return gulp.src('./specs/**.js')
+        .pipe(jasmine());
 });
 
 gulp.task('lint', function () {
