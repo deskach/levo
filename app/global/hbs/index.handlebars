@@ -21,8 +21,15 @@
         <h1 class="sg-title">TopNav component example</h1>
     </div>
 
-    {{>TopNav}}
+    {{#getJsonContext
+            '{"items": [{"title": "Home"}, {"title": "Explore"}, {"title": "Get in touch"}, {"title": "Sponsorship"}, {"title": "Events"}]}'}}
+        {{>TopNav}}
+    {{/getJsonContext}}
 
+    {{#getJsonContext
+            '{"items": [{"title": "Home"}, {"title": "Explore"}, {"title": "A Long Title Taht Pushes to 2 lines"}, {"title": "Sponsorship"}, {"title": "Events"}]}'}}
+        {{>TopNav}}
+    {{/getJsonContext}}
 </div><!-- /.container -->
 
 <script src="app.js"></script>

@@ -2831,12 +2831,12 @@ input[type="button"].btn-block {
   src: url("../assets/fonts/OpenSans-Bold.ttf") format("truetype");
   src: url("../assets/fonts/OpenSans-BoldItalic.ttf") format("truetype");
   src: url("../assets/fonts/OpenSans-Italic.ttf") format("truetype");
-  src: url("../assets/fonts/OpenSans-Regular.ttf") format("truetype");
+    src: url("../assets/fonts/OpenSans-Regular.ttf") format("truetype");
 }
 
 body {
   padding-top: 50px;
-  font-family: OpenSans sans-serif;
+    font-family: OpenSans sans-serif;
 }
 
 .sg-titleBox {

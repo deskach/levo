@@ -51,7 +51,12 @@ gulp.task('lint', function () {
 gulp.task('hbs', function () {
     var templateData = {},
         options = {
-            batch: ['./app/topnav/hbs/']
+            batch: ['./app/topnav/hbs/'],
+            helpers: {
+                getJsonContext: function (data, options) {
+                    return options.fn(JSON.parse(data));
+                }
+            }
         };
 
     return gulp.src('./app/global/hbs/index.handlebars')

@@ -2241,11 +2241,14 @@
 
 
     function init() {
-        var el = document.querySelector(".topNav");
-        el.setAttribute("data-uid", utils.getUID()); // adds a unique id (uid) to the component
-        setTodayTitle(el);
-        setSubTitle(el);
-        setEvenNav(el);
+        var topNavs = document.querySelectorAll(".topNav");
+
+        _.each(topNavs, function (el) {
+            el.setAttribute("data-uid", utils.getUID()); // adds a unique id (uid) to the component
+            setTodayTitle(el);
+            setSubTitle(el);
+            setEvenNav(el);
+        });
     }
 
 
