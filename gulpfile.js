@@ -1,14 +1,14 @@
-const gulp = require('gulp');
-const sass = require('gulp-sass');
-const flatten = require('gulp-flatten');
-const autoprefixer = require('gulp-autoprefixer');
-const jshint = require('gulp-jshint');
-const stylish = require('jshint-stylish');
-const handlebars = require('gulp-compile-handlebars');
-const rename = require('gulp-rename');
-const webserver = require('gulp-webserver');
-const jsValidate = require('gulp-jsvalidate');
-const concat = require('gulp-concat');
+var gulp = require('gulp');
+var sass = require('gulp-sass');
+var flatten = require('gulp-flatten');
+var autoprefixer = require('gulp-autoprefixer');
+var jshint = require('gulp-jshint');
+var stylish = require('jshint-stylish');
+var handlebars = require('gulp-compile-handlebars');
+var rename = require('gulp-rename');
+var webserver = require('gulp-webserver');
+var jsValidate = require('gulp-jsvalidate');
+var concat = require('gulp-concat');
 
 
 gulp.task('sass', function () {
@@ -70,7 +70,7 @@ gulp.task('webserver', function () {
         }));
 });
 
-const JS_SOURCES = [
+var JS_SOURCES = [
     "./node_modules/verge/verge.js",
     "./node_modules/underscore/underscore.js",
     "./libs/**/*.js",

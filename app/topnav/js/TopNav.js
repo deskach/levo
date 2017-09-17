@@ -36,7 +36,7 @@
 
     // gets the window viewport width
     function isMobileVP() {
-        return verge.viewportW() < 768
+        return verge.viewportW() < 768;
     }
 
     // set the library 'EvenNav', which evenly sizes navigation elements horizontally
@@ -48,7 +48,7 @@
 
         // needs a resize handler so it can clear mobile styles and recalculate when window is resized
         window.addEventListener("resize", function () {
-            var isMb = isMobileVP()
+            var isMb = isMobileVP();
 
             evenNav.clearClasses(el, !isMb);
             if (!isMb) evenNav.resize(el, !isMb);
