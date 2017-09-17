@@ -1,4 +1,4 @@
-(function(utils, evenNav, verge) {
+(function (utils, evenNav, verge) {
 
 
     function init() {
@@ -12,13 +12,17 @@
 
     // Changes the upper case characters of '.topNav-subTitle' to pascal case
     function setSubTitle(el) {
-        // TODO: use 'utils.toPascalCase' to sanitize the contents of element '.topNav-subTitle'
+        var subTitleEl = _.find(el.children, function (c) {
+            return c.getAttribute('class') === 'topNav-subTitle';
+        });
+
+        subTitleEl.innerText = utils.toPascalCase(subTitleEl.innerText);
     }
 
 
     // Replaces '--WEEK_DAY_NAME--' and '--MONTH_NAME--' with dynamic contents in element '.topNav-title'
     function setTodayTitle(el) {
-        
+
         // TODO: add today's week day and month name to the element '.topNav-title', using 'utils.getWeekDay' and 'utils.getMonthName'
     }
 
@@ -30,17 +34,17 @@
 
     // set the library 'EvenNav', which evenly sizes navigation elements horizontally
     function setEvenNav(el) {
-        
+
         evenNav.init(el, {
             condition: !isMobileVP() // ignores mobile
         });
 
         // needs a resize handler so it can clear mobile styles and recalculate when window is resized
-        window.addEventListener("resize", function() {
+        window.addEventListener("resize", function () {
             var isMb = isMobileVP()
 
             evenNav.clearClasses(el, !isMb);
-            if(!isMb) evenNav.resize(el, !isMb);
+            if (!isMb) evenNav.resize(el, !isMb);
         });
     }
 

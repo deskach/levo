@@ -70,7 +70,13 @@ gulp.task('webserver', function () {
         }));
 });
 
-const JS_SOURCES = ["./app/**/*.js", "./node_modules/verge/verge.js", "./libs/**/*.js"];
+const JS_SOURCES = [
+    "./node_modules/verge/verge.js",
+    "./node_modules/underscore/underscore.js",
+    "./libs/**/*.js",
+    "./app/**/*.js"
+];
+
 gulp.task('js', function () {
     return gulp.src(JS_SOURCES)
         .pipe(jsValidate())
