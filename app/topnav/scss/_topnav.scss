@@ -107,11 +107,11 @@ $green: #5CAD85;
     padding: 1rem;
 
     &-title {
-      margin: 0;
+      margin: 2rem 0 0 0;
     }
 
     &-subTitle {
-      margin: 0;
+      margin: 2rem 0 0 0;
       text-align: left;
     }
 
@@ -123,10 +123,14 @@ $green: #5CAD85;
       .topNav-item {
 
         .topNav-btn {
-          padding: 1rem 0;
+          padding: 1rem 1.5rem;
           text-decoration: none;
           display: inline-block;
           width: 100%;
+
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
 
           .topNav-itemText {
             display: inline-block;

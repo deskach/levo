@@ -2910,11 +2910,11 @@ input[type="button"].btn-block {
   }
 
   .topNav-title {
-    margin: 0;
+    margin: 2rem 0 0 0;
   }
 
   .topNav-subTitle {
-    margin: 0;
+    margin: 2rem 0 0 0;
     text-align: left;
   }
 
@@ -2925,10 +2925,13 @@ input[type="button"].btn-block {
   }
 
   .topNav-list .topNav-item .topNav-btn {
-    padding: 1rem 0;
+    padding: 1rem 1.5rem;
     text-decoration: none;
     display: inline-block;
     width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .topNav-list .topNav-item .topNav-btn .topNav-itemText {
@@ -2938,7 +2941,6 @@ input[type="button"].btn-block {
     margin: 0;
     padding: 1.5rem;
   }
-
   .topNavThemeCyan {
     padding-right: 1rem;
   }
