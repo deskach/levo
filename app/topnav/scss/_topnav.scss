@@ -1,7 +1,104 @@
 @import "../../../libs/evennav/evennav";
 
+$title-font-size: 20px;
+
+$white: #FFFFFF;
+$dark-blue: #586E9D;
+$light-blue: #CCD9E1;
+$blue: #7093A7;
+
+$cyan: #8A6FA6;
+$mid-cyan: #A86795;
+$light-cyan: #D7CDDE;
+$green: #5CAD85;
+
+.clearfix {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+
 .topNav {
-    &-title {
-        color: rgb(27.5%, 51%, 70.6%);
+  margin: 1rem 0;
+  padding: 1rem 0;
+
+  &-title {
+    margin: 0 1rem;
+    color: rgb(27.5%, 51%, 70.6%);
+    text-align: left;
+    font-size: $title-font-size;
+  }
+
+  &-subTitle {
+    margin: 0 1rem;
+    text-align: right;
+    font-size: $title-font-size;
+  }
+
+  &-list {
+    margin: 2rem 0;
+
+    .topNav-item {
+
+      .topNav-itemText {
+        margin: 0 .5rem;
+      }
     }
+  }
+}
+
+.topNavThemeBlue {
+  background-color: $blue;
+
+  .topNav-title {
+    color: $white;
+  }
+
+  .topNav-subTitle {
+    color: $white;
+  }
+
+  .topNav-list {
+    .topNav-item {
+      .topNav-itemText {
+        color: $dark-blue;
+        background-color: $light-blue;
+      }
+
+      .topNav-itemText:hover {
+        background-color: $dark-blue;
+        color: $white;
+      }
+    }
+  }
+}
+
+.topNavThemeCyan {
+  background-color: $cyan;
+  padding-right: 45%;
+
+  .topNav-title {
+    color: $white;
+  }
+
+  .topNav-subTitle {
+    color: $white;
+  }
+
+  .topNav-list {
+    margin: 3rem 0;
+
+    .topNav-item {
+      .topNav-itemText {
+        color: $mid-cyan;
+        background-color: $light-cyan;
+      }
+
+      .topNav-itemText:hover {
+        background-color: $green;
+        color: $white;
+      }
+    }
+  }
 }

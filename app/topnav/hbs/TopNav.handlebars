@@ -1,21 +1,31 @@
-<div class="topNav">
-    <p class="topNav-title">
-        Today is --WEEK_DAY_NAME-- and the month is --MONTH_NAME--
-    </p>
+<div class="topNav {{{theme}}}">
+    <div class="row">
+        <div class="col col-sm-6">
+            <p class="topNav-title">
+                Today is --WEEK_DAY_NAME-- and the month is --MONTH_NAME--
+            </p>
+        </div>
 
-    <p class="topNav-subTitle">
-        LEVO HAS OFFICES IN SYDNEY NSW AND MELBOURNE VIC.
-    </p>
+        <div class="col col-sm-6">
+            <p class="topNav-subTitle">
+                LEVO HAS OFFICES IN SYDNEY NSW AND MELBOURNE VIC.
+            </p>
+        </div>
+    </div>
 
-    <ul class="evennav-list evennav-nojs">
-        {{#each items}}
-            <li class="evennav-item">
-                <a href="#" class="evennav-btn">
-                    <span class="evennav-btninner">
+    <div class="row">
+        <div class="col col-sm-12">
+            <ul class="evennav-list evennav-nojs topNav-list">
+                {{#each items}}
+                    <li class="evennav-item topNav-item">
+                        <a href="#" class="evennav-btn">
+                    <span class="evennav-btninner topNav-itemText">
                         {{title}}
                     </span>
-                </a>
-            </li>
-        {{/each}}
-    </ul>
+                        </a>
+                    </li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
 </div>

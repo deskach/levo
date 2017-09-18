@@ -22,12 +22,12 @@
     </div>
 
     {{#getJsonContext
-            '{"items": [{"title": "Home"}, {"title": "Explore"}, {"title": "Get in touch"}, {"title": "Sponsorship"}, {"title": "Events"}]}'}}
+            '{"theme": "topNavThemeBlue", "items": [{"title": "Home"}, {"title": "Explore"}, {"title": "Get in touch"}, {"title": "Sponsorship"}, {"title": "Events"}]}'}}
         {{>TopNav}}
     {{/getJsonContext}}
 
     {{#getJsonContext
-            '{"items": [{"title": "Home"}, {"title": "Explore"}, {"title": "A Long Title Taht Pushes to 2 lines"}, {"title": "Sponsorship"}, {"title": "Events"}]}'}}
+            '{"theme": "topNavThemeCyan", "items": [{"title": "Home"}, {"title": "Explore"}, {"title": "A Long Title That Pushes to 2 lines"}, {"title": "Sponsorship"}, {"title": "Events"}]}'}}
         {{>TopNav}}
     {{/getJsonContext}}
 </div><!-- /.container -->

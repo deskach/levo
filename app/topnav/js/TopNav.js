@@ -15,9 +15,7 @@
 
     // Changes the upper case characters of '.topNav-subTitle' to pascal case
     function setSubTitle(el) {
-        var subTitleEl = _.find(el.children, function (c) {
-            return c.getAttribute('class') === 'topNav-subTitle';
-        });
+        var subTitleEl = el.querySelector('.topNav-subTitle');
 
         subTitleEl.innerText = utils.toPascalCase(subTitleEl.innerText);
     }
@@ -25,10 +23,7 @@
 
     // Replaces '--WEEK_DAY_NAME--' and '--MONTH_NAME--' with dynamic contents in element '.topNav-title'
     function setTodayTitle(el) {
-        var subTitleEl = _.find(el.children, function (c) {
-            return c.getAttribute('class') === 'topNav-title';
-        });
-
+        var subTitleEl = el.querySelector('.topNav-title');
         var innerText = subTitleEl.innerText;
 
         innerText = innerText.replace("--WEEK_DAY_NAME--", utils.getWeekDay());

@@ -2823,20 +2823,98 @@ input[type="button"].btn-block {
   padding: 12px 0;
   transform: translateY(-50%); }
 
+.clearfix {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.topNav {
+  margin: 1rem 0;
+  padding: 1rem 0;
+}
+
 .topNav-title {
-  color: steelblue; }
+  margin: 0 1rem;
+  color: steelblue;
+  text-align: left;
+  font-size: 20px;
+}
+
+.topNav-subTitle {
+  margin: 0 1rem;
+  text-align: right;
+  font-size: 20px;
+}
+
+.topNav-list {
+  margin: 2rem 0;
+}
+
+.topNav-list .topNav-item .topNav-itemText {
+  margin: 0 .5rem;
+}
+
+.topNavThemeBlue {
+  background-color: #7093A7;
+}
+
+.topNavThemeBlue .topNav-title {
+  color: #FFFFFF;
+}
+
+.topNavThemeBlue .topNav-subTitle {
+  color: #FFFFFF;
+}
+
+.topNavThemeBlue .topNav-list .topNav-item .topNav-itemText {
+  color: #586E9D;
+  background-color: #CCD9E1;
+}
+
+.topNavThemeBlue .topNav-list .topNav-item .topNav-itemText:hover {
+  background-color: #586E9D;
+  color: #FFFFFF;
+}
+
+.topNavThemeCyan {
+  background-color: #8A6FA6;
+  padding-right: 45%;
+}
+
+.topNavThemeCyan .topNav-title {
+  color: #FFFFFF;
+}
+
+.topNavThemeCyan .topNav-subTitle {
+  color: #FFFFFF;
+}
+
+.topNavThemeCyan .topNav-list {
+  margin: 3rem 0;
+}
+
+.topNavThemeCyan .topNav-list .topNav-item .topNav-itemText {
+  color: #A86795;
+  background-color: #D7CDDE;
+}
+
+.topNavThemeCyan .topNav-list .topNav-item .topNav-itemText:hover {
+  background-color: #5CAD85;
+  color: #FFFFFF;
+}
 
 @font-face {
   font-family: "OpenSans";
   src: url("../assets/fonts/OpenSans-Bold.ttf") format("truetype");
   src: url("../assets/fonts/OpenSans-BoldItalic.ttf") format("truetype");
   src: url("../assets/fonts/OpenSans-Italic.ttf") format("truetype");
-    src: url("../assets/fonts/OpenSans-Regular.ttf") format("truetype");
+  src: url("../assets/fonts/OpenSans-Regular.ttf") format("truetype");
 }
 
 body {
   padding-top: 50px;
-    font-family: OpenSans sans-serif;
+  font-family: OpenSans sans-serif;
 }
 
 .sg-titleBox {
