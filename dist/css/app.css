@@ -2904,6 +2904,46 @@ input[type="button"].btn-block {
   color: #FFFFFF;
 }
 
+@media (max-width: 767px) {
+  .topNav {
+    padding: 1rem;
+  }
+
+  .topNav-title {
+    margin: 0;
+  }
+
+  .topNav-subTitle {
+    margin: 0;
+    text-align: left;
+  }
+
+  .topNav-list {
+    list-style-type: none;
+    font-size: 20px;
+    padding: 0;
+  }
+
+  .topNav-list .topNav-item .topNav-btn {
+    padding: 1rem 0;
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+  }
+
+  .topNav-list .topNav-item .topNav-btn .topNav-itemText {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    padding: 1.5rem;
+  }
+
+  .topNavThemeCyan {
+    padding-right: 1rem;
+  }
+}
+
 @font-face {
   font-family: "OpenSans";
   src: url("../assets/fonts/OpenSans-Bold.ttf") format("truetype");
